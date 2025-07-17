@@ -6,6 +6,12 @@ wsl --Install
 ## Step 2: Download the Ubuntu WSL tarball
 https://cloud-images.ubuntu.com/releases/hirsute/release/ubuntu-21.04-server-cloudimg-amd64-wsl.rootfs.tar.gz
 
+https://wslstorestorage.blob.core.windows.net/wslblob/Ubuntu2404-240425.AppxBundle 
+
+Guide:
+https://learn.microsoft.com/en-us/windows/wsl/install-manual#downloading-distributions 
+
+
 ## Step 3: Install the second instance of Ubuntu in WSL2
 wsl --import <Distribution Name> <Installation Folder> <Ubuntu WSL2 Image Tarball path>
 
@@ -49,3 +55,15 @@ wsl --set-version <Distribution Name> 1
 
 ## Link of the web site 
 https://cloudbytes.dev/snippets/how-to-install-multiple-instances-of-ubuntu-in-wsl2
+
+## Remove a distro
+
+    wsl --unregister <distro name>
+
+## Backup
+
+    wsl --export Ubuntu Ubuntu.tar
+
+## Restore
+
+    wsl --import <Distribution Name> <InstallLocation> <FileName>
